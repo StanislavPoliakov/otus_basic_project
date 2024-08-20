@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+var dependencies: FinancialDemoLibraryApi? = nil
+
 @main
 struct FinancialDemoApp: App {
+    init() {
+        dependencies = FinancialDemoLibraryApi.shared
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
